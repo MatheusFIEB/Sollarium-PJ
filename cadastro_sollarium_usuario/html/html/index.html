@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sollarium</title>
+    <link rel="stylesheet" href="../html/css-responsive/reponsive.css">
+    <style>
+       /* Estilos padrão */
+   /* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.box {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box img {
+    max-width: 80px;
+    margin: 0 auto 10px;
+    justify-content: center;
+}
+
+.btn-abrir-modal {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para os modais */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+}
+
+/* Botão para fechar o modal */
+.btn-fechar-modal {
+    background: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Estilos para os radios em lista vertical */
+ul {
+    list-style-type: none;
+    padding: 10; 
+}
+
+li {
+    margin: 10px 0; /* Espaçamento entre os itens da lista */
+}
+
+/* Estilize os rótulos dos radios */
+li label {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/email.png" alt="alt">
+            <h2>Adicione seu e-mail</h2>
+            <p>Assim você receberá informações sobre sua conta</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalEmail')">Adicione</button>
+        </div>
+
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/telefone-removebg-preview.png" alt="">
+            <h2>Valide seu telefone</h2>
+            <p>Assim você poderá usá-lo para acessar sua conta</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalTelefone')">Adicione</button>
+        </div>
+
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/servico-removebg-preview.png" alt="">
+            <h2>Escolha seu serviço (opcional)</h2>
+            <p>Assim escolheremos o profissional ideal para você</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalServico')">Adicione</button>
+        </div>
+
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/regiao-removebg-preview.png" alt="">
+            <h2>Adicione sua região</h2>
+            <p>Assim escolheremos o profissional de acordo com sua região</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalRegion')">Adicione</button>
+        </div>
+
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/senha-removebg-preview.png" alt="">
+            <h2>Crie sua senha forte</h2>
+            <p>Assim manterá sua conta protegida</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalSenhaforte')">Adicione</button>
+        </div>
+        
+        <div class="box">
+            <img src="/cadastro_sollarium_usuario//imagens/usuario-removebg-preview.png" alt="">
+            <h2>Digite seu nome</h2>
+            <p>Assim você será identificado em nossa plataforma</p>
+            <button class="btn-abrir-modal" onclick="abrirModal('modalNome')">Pronto!</button>
+        </div>
+    </div>
+
+    <div id="modalEmail" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalEmail')">&times;</span>
+            <h2>Cadastro de E-mail</h2>
+            <p>Por favor, insira seu e-mail:</p>
+            <input type="email" placeholder="Seu e-mail">
+            <button class="btn-fechar-modal" onclick="fecharModal('modalEmail')">Ok</button>
+        </div>
+    </div>
+
+    <!-- Modal de Validação de Telefone -->
+    <div id="modalTelefone" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalTelefone')">&times;</span>
+            <h2>Validação de Telefone</h2>
+            <p>Por favor, insira seu número de telefone:</p>
+            <input type="tel" placeholder="Seu telefone">
+            <button class="btn-fechar-modal" onclick="fecharModal('modalTelefone')">Ok</button>
+        </div>
+    </div>
+
+    <div id="modalServico" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalServico')">&times;</span>
+            <h2>Escolha seu serviço</h2>
+            <p>Por favor, nos informe o serviço que deseja:</p>
+            <ul>
+                <li>
+            <input type="radio" name="regiao" value="servico1"> Instalação para painéis solares residenciais.
+            <li>
+            <label>
+                <input type="radio" name="regiao" value="servico2"> Instalação para painéis solares comerciais
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="regiao" value="servico3"> Instalação de aquecedores solares
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="regiao" value="servico4"> Manutenção preventiva
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="regiao" value="servico5"> Instalação de aquecedores solares
+        </label>
+    </li>
+    <li>
+        <input type="radio" name="regiao" value="servico6"> Manutenção preventiva
+        </label>
+    </li>
+    <li>
+        <input type="radio" name="regiao" value="servico7"> Reparos emergenciais
+    </label>
+</li>
+<li>
+    <input type="radio" name="regiao" value="servico8"> Avaliação de potencial solar
+    </label>
+</li>
+<li>
+    <input type="radio" name="regiao" value="servico9"> Consultoria
+</label>
+</li>
+<li>
+<input type="radio" name="regiao" value="servico10"> Serviço de limpeza de painéis solares
+</label>
+</li>
+<li>
+<input type="radio" name="regiao" value="servico11"> Projeção de sistemas solares personalizados
+</label>
+</li>
+<li>
+<input type="radio" name="regiao" value="servico12"> Integração com amarzenamento de energia
+</label>
+</li>
+<li>
+<input type="radio" name="regiao" value="servico13"> Monitoramento remoto e manutenção proativa
+</label>
+</li>
+<li>
+<input type="radio" name="regiao" value="servico14"> Auditoria energética completa
+</label>
+</li>
+</ul>
+            <button class="btn-fechar-modal" onclick="fecharModal('modalServico')">Ok</button>
+        </div>
+    </div>
+
+    <div id="modalRegion" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalRegion')">&times;</span>
+            <h2>Nos informe sua região</h2>
+            <p>Por favor, informe sua região:</p>
+            <ul>
+                <li>
+            <label>
+                <input type="radio" name="regiao" value="regiao1"> São Paulo - SP
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="regiao" value="regiao2"> Rio de Janeiro - RJ
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="radio" name="regiao" value="regiao3"> Espírito Santo - ES
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="regiao" value="regiao4"> Minas Gerais - MG
+            </label>
+        </li>
+        </ul>
+            <button class="btn-fechar-modal" onclick="fecharModal('modalRegion')">Ok</button>
+        </div>
+    </div>
+
+    <div id="modalSenhaforte" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalSenhaforte')">&times;</span>
+            <h2>Cadastro de Senha Forte</h2>
+            <p>Por favor, crie uma senha forte:</p>
+            <input type="password" placeholder="Sua senha">
+            <p>Por favor, confirme sua senha:</p>
+            <input type="password" placeholder="Confirme sua senha">
+            <button class="btn-fechar-modal" onclick="fecharModal('modalSenhaforte')">Ok</button>
+        </div>
+    </div>
+
+    <div id="modalNome" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal" onclick="fecharModal('modalNome')">&times;</span>
+            <h2>Seu nome</h2>
+            <p>Por favor, por fim, digite seu nome:</p>
+            <input type="text" placeholder="Seu nome completo">
+            <a href="/perfil_usuario/html/index.html">
+            <button class="btn-fechar-modal" onclick="fecharModal('modalNome')">Ok</button>
+        </a>
+        </div>
+    </div>
+
+    <!-- JavaScript para abrir e fechar os modais -->
+    <script>
+        function abrirModal(id) {
+            var modal = document.getElementById(id);
+            modal.style.display = 'block';
+        }
+
+        function fecharModal(id) {
+            var modal = document.getElementById(id);
+            modal.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

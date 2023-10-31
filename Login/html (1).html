@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+
+
+<html lang="pt-BR">
+
+
+
+<head>
+
+
+
+  <meta charset="UTF-8">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <style>
+    .rectangle {
+
+      width: 1920px;
+
+      height: 1552px;
+
+      padding: 2px 2px 2px 2px;
+
+      border: 1px solid rgba(121, 121, 121, 0);
+
+      background-image: linear-gradient(89.99999999999997deg, #5d22bd 0%, #af14b4 100%);
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    .sign-in-background {
+
+      width: 1400px;
+
+      height: 900px;
+
+      padding: 2px 2px 2px 2px;
+
+      border-radius: 10px;
+
+      background-color: #ffffff;
+
+      position: relative;
+
+      left: 230px;
+
+      top: 250px;
+
+    }
+
+
+
+
+
+
+
+    h1 {
+
+      width: 377px;
+
+      height: 43px;
+
+      background-color: rgba(255, 255, 255, 0);
+
+      box-sizing: border-box;
+
+      font-family: "Roboto Bold", "Roboto", sans-serif;
+
+      font-weight: 700;
+
+      color: #333333;
+
+      text-align: center;
+
+      line-height: normal;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+
+      top: 40px;
+
+      left: 470px;
+
+      font-size: 30px;
+
+    }
+
+
+
+    pre {
+
+      width: 185px;
+
+      height: 17px;
+
+      background-color: rgba(255, 255, 255, 0);
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #8c8c8c;
+
+      text-align: left;
+
+      line-height: normal;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+
+      top: 70px;
+
+      left: 493px;
+
+      font-size: 15px;
+
+    }
+
+
+
+    a {
+
+      width: 79px;
+
+      height: 17px;
+
+      background-color: rgba(255, 255, 255, 0);
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #1e98d7;
+
+      line-height: normal;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+
+      top: 37px;
+
+      left: 730px;
+
+      font-size: 15px;
+
+    }
+
+
+
+    .form-container {
+
+      margin: 0 auto;
+
+      position: relative;
+
+      Width: 100px;
+
+      height: 150px;
+
+      top: -200px;
+
+      left: -660px;
+
+    }
+
+
+
+    .form-container textarea {
+
+
+
+      width: 858px;
+
+      height: 91px;
+
+      padding: 100px;
+
+      border-radius: 4px;
+
+      border: 1px solid;
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #333333;
+
+      text-align: left;
+
+
+
+    }
+
+
+
+    .form-container label {
+
+
+
+      width: 37px;
+
+      height: 17px;
+
+      background-color: rgba(255, 255, 255, 0);
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #8c8c8c;
+
+      line-height: normal;
+
+      letter-spacing: 0.4px;
+
+    }
+
+
+
+    .form-container input {
+
+      width: 858px;
+
+      height: 91px;
+
+      border-radius: 4px;
+
+      border: 1px solid;
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #333333;
+
+      text-align: left;
+
+      position: relative;
+
+      padding: 12px 20px;
+
+      margin: 20px 0;
+
+
+
+    }
+
+
+
+
+
+    body {
+
+
+
+      font-family: Arial, sans-serif;
+
+
+
+    }
+
+
+
+    form {
+
+      background-color: rgba(255, 255, 255, 0);
+
+      font-family: "Roboto", sans-serif;
+
+      color: #8c8c8c;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+
+      top: 310px;
+
+      left: 280px;
+
+      font-size: 13px;
+
+
+
+    }
+
+
+
+    .Senha a {
+
+      top: 258px;
+
+      left: 1023px;
+
+      font-size: 13px;
+
+      background-color: rgba(255, 255, 255, 0);
+
+      box-sizing: border-box;
+
+      font-family: "Roboto", sans-serif;
+
+      color: #1e98d7;
+
+    }
+
+
+
+    button {
+
+      width: 858px;
+
+      height: 40px;
+
+      background-image: linear-gradient(89.99999999999997deg, #0000ff 0%, #cd0093 100%);
+
+      border: 1px;
+
+      font-size: 20px;
+
+      color: #ffffff;
+
+      position: relative;
+
+      top: 50px;
+
+
+
+    }
+
+
+
+    .lembre {
+
+      background-color: rgba(255, 255, 255, 0);
+
+      font-family: "Roboto", sans-serif;
+
+      color: #8c8c8c;
+
+      letter-spacing: 0.4px;
+
+      position: relative;
+
+      top: 270px;
+
+      left: 280px;
+
+      font-size: 13px;
+
+
+
+    }
+
+
+
+    hr {
+
+      width: 405px;
+
+      size: 10px;
+
+      position: relative;
+
+      top: 60px;
+
+    }
+
+
+
+    .linha {
+
+      width: 405px;
+
+      size: 10px;
+
+      position: relative;
+
+      top: -8px;
+
+      left: 450px;
+
+    }
+
+
+
+    h6 {
+
+      position: relative;
+
+      top: 15px;
+
+      left: 420px;
+
+      font-size: 13px;
+
+    }
+
+
+
+    img {
+
+      width: 38px;
+
+      height: 40px;
+
+      box-sizing: border-box;
+
+      position: relative;
+
+      top: 360px;
+
+      left: 650px;
+
+
+
+    }
+
+
+
+    .image1 {
+
+      position: relative;
+
+      top: -44px;
+
+      left: 65px;
+
+    }
+  </style>
+
+
+
+<body>
+
+
+
+  <div class="rectangle">
+
+
+
+    <div class="sign-in-background">
+
+
+
+      <h1>Bem-vindo(a) de volta!</h1>
+
+
+
+      <pre>Não tem uma conta profissional?</pre>
+
+      <a href="" title="cadastre-se">cadastre-se</a>
+
+
+
+      <pre>Não tem uma conta cliente?</pre>
+
+      <a href="" title="cadastre-se">cadastre-se</a>
+
+
+
+      <div class="form-container">
+
+
+
+        <form action="#" method="post">
+
+
+
+          <div class="form-group">
+
+
+
+            <label for="email">Email:</label>
+
+
+
+            <input type="email" id="email" name="email" required>
+
+
+
+          </div>
+
+
+
+          <div class="form-group">
+
+
+
+            <label for="Senha">Senha:</label>
+
+
+
+            <input type="password" id="Senha" name="Senha" required>
+
+
+
+          </div>
+
+
+
+          <br>
+
+
+
+          <div class="form-grouptext-center">
+
+
+
+            <button type="submit" class="submit-button">Entrar</button>
+
+
+
+            <hr>
+
+
+
+            <div class="linha">
+
+
+
+              <hr>
+
+
+
+            </div>
+
+
+
+            <h6>OU</h6>
+
+
+
+          </div>
+
+
+
+        </form>
+
+
+
+      </div>
+
+
+
+      <div class="lembre">
+
+
+
+        <input type="checkbox" id="remember-me" name="remember-me" value="remember-me">
+
+        <label for="Remember">Me lembre</label><br>
+
+
+
+      </div>
+
+
+
+      <div class="Senha">
+
+        <a href="" title="Esqueceu a senha?">Esqueceu a senha?</a>
+
+      </div>
+
+
+
+      </form>
+
+
+
+      <img src="/Login/image1 (1).png" alt="image">
+
+
+
+      <div class="image1">
+
+
+
+        <img src="/Login/image2 (1).png" alt="image">
+
+
+
+      </div>
+
+
+
+</body>
+
+
+
+</html>
